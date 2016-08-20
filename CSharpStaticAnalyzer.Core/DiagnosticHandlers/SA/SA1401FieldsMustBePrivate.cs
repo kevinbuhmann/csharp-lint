@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CSharpStaticAnalyzer.Core.DiagnosticHandlers.SA
+﻿namespace CSharpStaticAnalyzer.Core.DiagnosticHandlers.SA
 {
     public class SA1401FieldsMustBePrivate : DiagnoticHandler
     {

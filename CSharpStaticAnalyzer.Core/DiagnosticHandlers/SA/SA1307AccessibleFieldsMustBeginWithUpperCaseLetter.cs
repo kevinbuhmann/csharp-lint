@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace CSharpStaticAnalyzer.Core.DiagnosticHandlers.SA
 {
+    [SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "UpperCase", Justification = "Using same name as StyleCopAnalyzers.")]
     public class SA1307AccessibleFieldsMustBeginWithUpperCaseLetter : DiagnoticHandler
     {
         public override Serverity Serverity

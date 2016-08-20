@@ -28,9 +28,14 @@ namespace CSharpStaticAnalyzer.Core
 
         public Violation CreateViolation(Diagnostic diagnostic)
         {
+            if (diagnostic == null)
+            {
+                throw new ArgumentNullException(nameof(diagnostic));
+            }
+
             if (this.Id != diagnostic.Descriptor.Id)
             {
-                throw new ArgumentException("Diagnostic Id mismatch.");
+                throw new ArgumentException("Diagnostic Id mismatch.", nameof(diagnostic));
             }
 
             FileLinePositionSpan lineSpan = diagnostic.Location.GetLineSpan();

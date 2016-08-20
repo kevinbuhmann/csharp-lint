@@ -6,10 +6,15 @@ using System.IO;
 
 namespace CSharpStaticAnalyzer
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
+            if (args == null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
+
             if (args.Length != 1)
             {
                 Console.Write("Must specify exactly one argument which is the path to the file to analyze.");

@@ -3,6 +3,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Immutable;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -27,6 +28,7 @@ namespace CSharpStaticAnalyzer.Core
                 .ToImmutableArray();
         }
 
+        [SuppressMessage("Microsoft.Reliability", "CA2001:AvoidCallingProblematicMethods", MessageId = "System.Reflection.Assembly.LoadFile", Justification = "No other option.")]
         private static ImmutableArray<Diagnostic> GetDiagnostics(string filePath, string csharpSource)
         {
             SyntaxTree tree = CSharpSyntaxTree.ParseText(csharpSource, path: filePath);
@@ -37,7 +39,7 @@ namespace CSharpStaticAnalyzer.Core
 
             ImmutableArray<Diagnostic> compilationDiagnostics = compilation.GetDiagnostics();
             string stylycopAnalyzersPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "StyleCop.Analyzers.dll");
-            Assembly stylecopAnalyzersAssembly = Assembly.LoadFrom(stylycopAnalyzersPath);
+            Assembly stylecopAnalyzersAssembly = Assembly.LoadFile(stylycopAnalyzersPath);
             ImmutableArray<DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
                 .Where(t => t.IsAbstract == false && typeof(DiagnosticAnalyzer).IsAssignableFrom(t))
                 .Select(t => Activator.CreateInstance(t) as DiagnosticAnalyzer)
