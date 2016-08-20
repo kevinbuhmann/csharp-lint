@@ -3,6 +3,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
 using System;
 using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -21,7 +22,8 @@ namespace CSharpStaticAnalyzer.Core
 
             ImmutableArray<Diagnostic> compilationDiagnostics = compilation.GetDiagnostics();
 
-            Assembly stylecopAnalyzersAssembly = Assembly.LoadFrom(@"StyleCop.Analyzers.dll");
+            string stylycopAnalyzersPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "StyleCop.Analyzers.dll");
+            Assembly stylecopAnalyzersAssembly = Assembly.LoadFrom(stylycopAnalyzersPath);
             ImmutableArray<DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
                 .Where(t => t.IsAbstract == false && typeof(DiagnosticAnalyzer).IsAssignableFrom(t))
                 .Select(t => Activator.CreateInstance(t) as DiagnosticAnalyzer)
