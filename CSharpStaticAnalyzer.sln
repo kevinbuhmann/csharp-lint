@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpStaticAnalyzer", "CSharpStaticAnalyzer\CSharpStaticAnalyzer.csproj", "{CD042FC1-B0A2-4E91-82DF-DF0FF1D5C816}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpStaticAnalyzer.Core", "CSharpStaticAnalyzer.Core\CSharpStaticAnalyzer.Core.csproj", "{9FFBE65B-3869-41C1-BDC7-CC8C05E0CDEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{88DAD0EE-4C2D-47F4-8015-90C0BFF5160E}"
+	ProjectSection(SolutionItems) = preProject
+		rules.ruleset = rules.ruleset
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{CD042FC1-B0A2-4E91-82DF-DF0FF1D5C816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD042FC1-B0A2-4E91-82DF-DF0FF1D5C816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD042FC1-B0A2-4E91-82DF-DF0FF1D5C816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFBE65B-3869-41C1-BDC7-CC8C05E0CDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFBE65B-3869-41C1-BDC7-CC8C05E0CDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFBE65B-3869-41C1-BDC7-CC8C05E0CDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFBE65B-3869-41C1-BDC7-CC8C05E0CDEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
