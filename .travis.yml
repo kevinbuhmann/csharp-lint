@@ -3,4 +3,5 @@ solution: CSharpStaticAnalyzer.sln
 mono:
  - beta
 script:
+ - xbuild /p:Configuration=Release CSharpStaticAnalyzer.sln
  - CSharpStaticAnalyzer/bin/Release/CSharpStaticAnalyzer.exe CSharpStaticAnalyzer/Program.cs
