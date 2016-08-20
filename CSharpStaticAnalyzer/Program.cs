@@ -25,8 +25,8 @@ namespace CSharpStaticAnalyzer
             }
 
             string csharpSource = File.ReadAllText(filePath);
-            ImmutableArray<Violation> violations = Analyzer.Analyze(csharpSource);
-            Console.WriteLine(JsonConvert.SerializeObject(violations));
+            ImmutableArray<Violation> violations = Analyzer.Analyze(filePath, csharpSource);
+            Console.WriteLine(JsonConvert.SerializeObject(violations, Formatting.Indented));
         }
     }
 }

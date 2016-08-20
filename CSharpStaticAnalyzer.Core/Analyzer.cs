@@ -12,16 +12,30 @@ namespace CSharpStaticAnalyzer.Core
 {
     public static class Analyzer
     {
-        public static ImmutableArray<Violation> Analyze(string csharpSource)
+        public static ImmutableArray<Violation> Analyze(string filePath, string csharpSource)
         {
-            SyntaxTree tree = CSharpSyntaxTree.ParseText(csharpSource);
+            ImmutableArray<Diagnostic> diagnostics = GetDiagnostics(filePath, csharpSource);
+
+            ImmutableArray<DiagnoticHandler> handlers = typeof(Analyzer).Assembly.GetTypes()
+                .Where(t => t.IsAbstract == false && typeof(DiagnoticHandler).IsAssignableFrom(t))
+                .Select(t => Activator.CreateInstance(t) as DiagnoticHandler)
+                .ToImmutableArray();
+
+            return diagnostics
+                .Select(diagnostic => handlers.FirstOrDefault(handler => handler.Id == diagnostic.Descriptor.Id)?.CreateViolation(diagnostic))
+                .Where(violation => violation != null)
+                .ToImmutableArray();
+        }
+
+        private static ImmutableArray<Diagnostic> GetDiagnostics(string filePath, string csharpSource)
+        {
+            SyntaxTree tree = CSharpSyntaxTree.ParseText(csharpSource, path: filePath);
 
             CSharpCompilation compilation = CSharpCompilation.Create("target")
                 .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                 .AddSyntaxTrees(tree);
 
             ImmutableArray<Diagnostic> compilationDiagnostics = compilation.GetDiagnostics();
-
             string stylycopAnalyzersPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "StyleCop.Analyzers.dll");
             Assembly stylecopAnalyzersAssembly = Assembly.LoadFrom(stylycopAnalyzersPath);
             ImmutableArray<DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
@@ -40,10 +54,6 @@ namespace CSharpStaticAnalyzer.Core
 
             return compilationDiagnostics
                 .Concat(analyzerDiagnostics)
-                .Select(i => {
-                    FileLinePositionSpan lineSpan = i.Location.GetLineSpan();
-                    return new Violation(lineSpan.StartLinePosition.Line, lineSpan.EndLinePosition.Line, i.Descriptor.Id, i.GetMessage());
-                 })
                 .ToImmutableArray();
         }
 
