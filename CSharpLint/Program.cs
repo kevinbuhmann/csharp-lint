@@ -3,7 +3,7 @@ using System;
 using System.Collections.Immutable;
 using System.IO;
 
-namespace CSharpStaticAnalyzer
+namespace CSharpLint
 {
     public static class Program
     {

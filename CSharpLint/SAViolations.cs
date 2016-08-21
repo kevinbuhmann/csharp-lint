@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace CSharpStaticAnalyzer
+namespace CSharpLint
 {
     public static class SAViolations
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{CD042FC1-B0A2-4E91-82DF-DF0FF1D5C816}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpStaticAnalyzer</RootNamespace>
-    <AssemblyName>CSharpStaticAnalyzer</AssemblyName>
+    <RootNamespace>CSharpLint</RootNamespace>
+    <AssemblyName>CSharpLint</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharpStaticAnalyzer.Program</StartupObject>
+    <StartupObject>CSharpLint.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeAnalysis, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

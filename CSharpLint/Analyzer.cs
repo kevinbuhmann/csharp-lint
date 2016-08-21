@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace CSharpStaticAnalyzer
+namespace CSharpLint
 {
     public static class Analyzer
     {

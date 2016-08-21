@@ -1,4 +1,4 @@
-﻿namespace CSharpStaticAnalyzer
+﻿namespace CSharpLint
 {
     public class Violation
     {
