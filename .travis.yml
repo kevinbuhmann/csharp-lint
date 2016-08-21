@@ -4,4 +4,4 @@ mono:
  - beta
 script:
  - xbuild /p:Configuration=Release CSharpStaticAnalyzer.sln
- - mono CSharpStaticAnalyzer/bin/Release/CSharpStaticAnalyzer.exe CSharpStaticAnalyzer/Program.cs
+ - mono CSharpStaticAnalyzer/bin/Release/CSharpStaticAnalyzer.exe TestSources/Test1.cs

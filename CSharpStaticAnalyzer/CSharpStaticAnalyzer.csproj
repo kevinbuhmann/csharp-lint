@@ -71,8 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analyzer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAViolations.cs" />
+    <Compile Include="Severity.cs" />
+    <Compile Include="Violation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -84,12 +88,6 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CSharpStaticAnalyzer.Core\CSharpStaticAnalyzer.Core.csproj">
-      <Project>{9ffbe65b-3869-41c1-bdc7-cc8c05e0cdef}</Project>
-      <Name>CSharpStaticAnalyzer.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

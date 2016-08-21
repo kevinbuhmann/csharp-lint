@@ -1,6 +1,6 @@
-﻿namespace CSharpStaticAnalyzer.Core
+﻿namespace CSharpStaticAnalyzer
 {
-    public enum Serverity
+    public enum Severity
     {
         Error = 3,
         MajorWarning = 2,

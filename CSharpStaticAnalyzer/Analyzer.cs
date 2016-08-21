@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace CSharpStaticAnalyzer.Core
+namespace CSharpStaticAnalyzer
 {
     public static class Analyzer
     {
@@ -17,14 +17,9 @@ namespace CSharpStaticAnalyzer.Core
         {
             ImmutableArray<Diagnostic> diagnostics = GetDiagnostics(filePath, csharpSource);
 
-            ImmutableArray<DiagnoticHandler> handlers = typeof(Analyzer).Assembly.GetTypes()
-                .Where(t => t.IsAbstract == false && typeof(DiagnoticHandler).IsAssignableFrom(t))
-                .Select(t => Activator.CreateInstance(t) as DiagnoticHandler)
-                .ToImmutableArray();
-
             return diagnostics
-                .Select(diagnostic => handlers.FirstOrDefault(handler => handler.Id == diagnostic.Descriptor.Id)?.CreateViolation(diagnostic))
-                .Where(violation => violation != null)
+                .Select(diagnostic => CreateViolation(diagnostic))
+                .Where(violation => violation.Serverity > Severity.None)
                 .ToImmutableArray();
         }
 
@@ -37,7 +32,8 @@ namespace CSharpStaticAnalyzer.Core
                 .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
                 .AddSyntaxTrees(tree);
 
-            ImmutableArray<Diagnostic> compilationDiagnostics = compilation.GetDiagnostics();
+            ImmutableArray<Diagnostic> parseDiagnostics = compilation.GetParseDiagnostics();
+
             string stylycopAnalyzersPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "StyleCop.Analyzers.dll");
             Assembly stylecopAnalyzersAssembly = Assembly.LoadFile(stylycopAnalyzersPath);
             ImmutableArray<DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
@@ -54,9 +50,32 @@ namespace CSharpStaticAnalyzer.Core
             analyzerDiagnosticsTask.Wait();
             ImmutableArray<Diagnostic> analyzerDiagnostics = analyzerDiagnosticsTask.Result;
 
-            return compilationDiagnostics
+            return parseDiagnostics
                 .Concat(analyzerDiagnostics)
                 .ToImmutableArray();
+        }
+
+        private static Violation CreateViolation(Diagnostic diagnostic)
+        {
+            FileLinePositionSpan lineSpan = diagnostic.Location.GetLineSpan();
+
+            int startLine = lineSpan.StartLinePosition.Line;
+            int endLine = lineSpan.EndLinePosition.Line;
+            string id = diagnostic.Id;
+            string message = diagnostic.GetMessage();
+
+            Severity severity = Severity.None;
+
+            if (id.StartsWith("CS"))
+            {
+                severity = Severity.Error;
+            }
+            else if (id.StartsWith("SA"))
+            {
+                severity = SAViolations.GetSeverity(diagnostic);
+            }
+
+            return new Violation(startLine, endLine, id, message, severity);
         }
 
         private static void OnAnalyzerException(Exception exception, DiagnosticAnalyzer analyzer, Diagnostic diagnostic)

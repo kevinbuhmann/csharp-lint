@@ -1,13 +1,12 @@
-﻿namespace CSharpStaticAnalyzer.Core
+﻿namespace CSharpStaticAnalyzer
 {
     public class Violation
     {
-        public Violation(int startLine, int endLine, string id, string name, string message, Serverity serverity)
+        public Violation(int startLine, int endLine, string id, string message, Severity serverity)
         {
             this.StartLine = startLine;
             this.EndLine = endLine;
             this.Id = id;
-            this.Name = name;
             this.Message = message;
             this.Serverity = serverity;
         }
@@ -18,10 +17,8 @@
 
         public string Id { get; }
 
-        public string Name { get;  }
-
         public string Message { get; }
 
-        public Serverity Serverity { get; }
+        public Severity Serverity { get; }
     }
 }
