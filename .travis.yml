@@ -7,7 +7,7 @@ script:
 - mono CSharpLint/bin/Release/CSharpLint.exe TestSources/Test1.cs
 after_success:
 - cd CSharpLint/bin/Release
-- zip -r CSharpLint.zip
+- zip -r CSharpLint.zip .
 deploy:
   provider: releases
   api_key:
