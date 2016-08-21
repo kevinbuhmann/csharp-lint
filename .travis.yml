@@ -4,12 +4,14 @@ mono:
 - beta
 script:
 - xbuild /p:Configuration=Release CSharpLint.sln
-- zip -r CSharpLint.zip CSharpLint/bin/Release
 - mono CSharpLint/bin/Release/CSharpLint.exe TestSources/Test1.cs
+after_success:
+- cd CSharpLint/bin/Release
+- zip -r CSharpLint.zip
 deploy:
   provider: releases
   api_key:
     secure: oiuyWsoqdJ/e942HbCTIOfkK/UsYL5La1ENyxnCRfx1Z0u+QmiivIqI6Jwakq4oBqnEenGYRp1bV0K/x2Lyuhc3+temesafHBwelXVDwNHz20zsZBA1jxrbDLKUB+USJvX1UEQTTs2nu6Xi9A59QxMqDL6gNz9s2aZwC5nKprHyPR+nxYOriuctP7c1pJa2aDCuDfkfALHR4tLKdy0kwtl+GXYIVcgpcbpkyixKEmwyoHPw5lQ8q+ItmBLvOCywHeeZuHDy0VwXvRyy/iPd4LeZ0gonw2VcWf7Z+xRJsAFJDJdyv85slHoYsSaGHLW6dxzG/UWs9Fc5IgXeRs6Z1Whk8xH6HaCxhTO6N2tPl+XeJvNuVwVt758TN7XFbiQHhSD6e7BsdjGihKzzK8d6o9oHBcMOZ6nDgDl9V8Dq2yt/wGWcAhUvFlLNo0VIhfG69l0U9DZOmKmSfdvPfR0jPdVPcvSb3ZnPcZtBl1ALCulLfOaV9S8z4Lr2Upz4Hcrs+M3AO3/EwM/QUuq0ExguP1QcuvKVGkfwpAx+C3edST6Rp93Qz7znTz5Co7DdBLkCeWv1QFNcqek1/CAllSKmj0mXCIhRW+0NwgTvzGqDC0ztghCzE8+NAIIewrW73IZ9pupyXSL26dInLtkOtaWrZqojY6MbnTTQk/vpURkL404Y=
-  file: CSharpLint.zip
+  file: CSharpLint/bin/Release/CSharpLint.zip
   on:
     tags: true
