@@ -36,9 +36,9 @@ namespace CSharpLint
                 .AddSyntaxTrees(tree);
 
             ImmutableArray<Diagnostic> parseDiagnostics = compilation.GetParseDiagnostics();
-            
+
             Assembly stylecopAnalyzersAssembly = Assembly.LoadFile(GetPathToFile(@"StyleCop.Analyzers.dll"));
-            ImmutableArray <DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
+            ImmutableArray<DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
                 .Where(t => t.IsAbstract == false && typeof(DiagnosticAnalyzer).IsAssignableFrom(t))
                 .Select(t => Activator.CreateInstance(t) as DiagnosticAnalyzer)
                 .ToImmutableArray();
