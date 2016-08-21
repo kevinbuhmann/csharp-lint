@@ -228,31 +228,31 @@ namespace CSharpLint
         private static Severity SA1200 { get; } = Severity.None;
 
         // ElementsMustAppearInTheCorrectOrder
-        private static Severity SA1201 { get; } = Severity.None;
+        private static Severity SA1201 { get; } = Severity.MinorWarning;
 
         // ElementsMustBeOrderedByAccess
-        private static Severity SA1202 { get; } = Severity.None;
+        private static Severity SA1202 { get; } = Severity.MinorWarning;
 
         // ConstantsMustAppearBeforeFields
-        private static Severity SA1203 { get; } = Severity.None;
+        private static Severity SA1203 { get; } = Severity.MinorWarning;
 
         // StaticElementsMustAppearBeforeInstanceElements
-        private static Severity SA1204 { get; } = Severity.None;
+        private static Severity SA1204 { get; } = Severity.MinorWarning;
 
         // PartialElementsMustDeclareAccess
-        private static Severity SA1205 { get; } = Severity.None;
+        private static Severity SA1205 { get; } = Severity.MajorWarning;
 
         // DeclarationKeywordsMustFollowOrder
-        private static Severity SA1206 { get; } = Severity.None;
+        private static Severity SA1206 { get; } = Severity.MajorWarning;
 
         // ProtectedMustComeBeforeInternal
-        private static Severity SA1207 { get; } = Severity.None;
+        private static Severity SA1207 { get; } = Severity.MinorWarning;
 
         // SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives
         private static Severity SA1208 { get; } = Severity.None;
 
         // UsingAliasDirectivesMustBePlacedAfterOtherUsingDirectives
-        private static Severity SA1209 { get; } = Severity.None;
+        private static Severity SA1209 { get; } = Severity.MinorWarning;
 
         // UsingDirectivesMustBeOrderedAlphabeticallyByNamespace
         private static Severity SA1210 { get; } = Severity.None;
@@ -261,16 +261,16 @@ namespace CSharpLint
         private static Severity SA1211 { get; } = Severity.None;
 
         // PropertyAccessorsMustFollowOrder
-        private static Severity SA1212 { get; } = Severity.None;
+        private static Severity SA1212 { get; } = Severity.MinorWarning;
 
         // EventAccessorsMustFollowOrder
-        private static Severity SA1213 { get; } = Severity.None;
+        private static Severity SA1213 { get; } = Severity.MinorWarning;
 
         // ReadonlyElementsMustAppearBeforeNonReadonlyElements
-        private static Severity SA1214 { get; } = Severity.None;
+        private static Severity SA1214 { get; } = Severity.MajorWarning;
 
         // InstanceReadonlyElementsMustAppearBeforeInstanceNonReadonlyElements
-        private static Severity SA1215 { get; } = Severity.None;
+        private static Severity SA1215 { get; } = Severity.MajorWarning;
 
         // UsingStaticDirectivesMustBePlacedAtTheCorrectLocation
         private static Severity SA1216 { get; } = Severity.None;
@@ -283,89 +283,89 @@ namespace CSharpLint
         #region SA1300
 
         // ElementMustBeginWithUpperCaseLetter
-        private static Severity SA1300 { get; } = Severity.None;
+        private static Severity SA1300 { get; } = Severity.MajorWarning;
 
         // ElementMustBeginWithLowerCaseLetter
-        private static Severity SA1301 { get; } = Severity.None;
+        private static Severity SA1301 { get; } = Severity.MajorWarning;
 
         // InterfaceNamesMustBeginWithI
-        private static Severity SA1302 { get; } = Severity.None;
+        private static Severity SA1302 { get; } = Severity.MajorWarning;
 
         // ConstFieldNamesMustBeginWithUpperCaseLetter
-        private static Severity SA1303 { get; } = Severity.None;
+        private static Severity SA1303 { get; } = Severity.MajorWarning;
 
         // NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter
-        private static Severity SA1304 { get; } = Severity.None;
+        private static Severity SA1304 { get; } = Severity.MajorWarning;
 
         // FieldNamesMustNotUseHungarianNotation
-        private static Severity SA1305 { get; } = Severity.None;
+        private static Severity SA1305 { get; } = Severity.MajorWarning;
 
         // FieldNamesMustBeginWithLowerCaseLetter
-        private static Severity SA1306 { get; } = Severity.None;
+        private static Severity SA1306 { get; } = Severity.MajorWarning;
 
         // AccessibleFieldsMustBeginWithUpperCaseLetter
         private static Severity SA1307 { get; } = Severity.MinorWarning;
 
         // VariableNamesMustNotBePrefixed
-        private static Severity SA1308 { get; } = Severity.None;
+        private static Severity SA1308 { get; } = Severity.MajorWarning;
 
         // FieldNamesMustNotBeginWithUnder
-        private static Severity SA1309 { get; } = Severity.None;
+        private static Severity SA1309 { get; } = Severity.MinorWarning;
 
         // FieldNamesMustNotContainUnder
-        private static Severity SA1310 { get; } = Severity.None;
+        private static Severity SA1310 { get; } = Severity.MinorWarning;
 
         // StaticReadonlyFieldsMustBeginWithUpperCaseLetter
-        private static Severity SA1311 { get; } = Severity.None;
+        private static Severity SA1311 { get; } = Severity.MajorWarning;
 
         // VariableNamesMustBeginWithLowerCaseLetter
-        private static Severity SA1312 { get; } = Severity.None;
+        private static Severity SA1312 { get; } = Severity.MinorWarning;
 
         // ParameterNamesMustBeginWithLowerCaseLetter
-        private static Severity SA1313 { get; } = Severity.None;
+        private static Severity SA1313 { get; } = Severity.MinorWarning;
 
         #endregion
 
         #region SA1400
 
         // AccessModifierMustBeDeclared
-        private static Severity SA1400 { get; } = Severity.None;
+        private static Severity SA1400 { get; } = Severity.MajorWarning;
 
         // FieldsMustBePrivate
         private static Severity SA1401 { get; } = Severity.MajorWarning;
 
         // FileMayOnlyContainASingleClass
-        private static Severity SA1402 { get; } = Severity.None;
+        private static Severity SA1402 { get; } = Severity.MajorWarning;
 
         // FileMayOnlyContainASingleNamespace
-        private static Severity SA1403 { get; } = Severity.None;
+        private static Severity SA1403 { get; } = Severity.MajorWarning;
 
         // CodeAnalysisSuppressionMustHaveJustification
-        private static Severity SA1404 { get; } = Severity.None;
+        private static Severity SA1404 { get; } = Severity.MajorWarning;
 
         // DebugAssertMustProvideMessageText
-        private static Severity SA1405 { get; } = Severity.None;
+        private static Severity SA1405 { get; } = Severity.MinorWarning;
 
         // DebugFailMustProvideMessageText
-        private static Severity SA1406 { get; } = Severity.None;
+        private static Severity SA1406 { get; } = Severity.MinorWarning;
 
         // ArithmeticExpressionsMustDeclarePrecedence
-        private static Severity SA1407 { get; } = Severity.None;
+        private static Severity SA1407 { get; } = Severity.MinorWarning;
 
         // ConditionalExpressionsMustDeclarePrecedence
-        private static Severity SA1408 { get; } = Severity.None;
+        private static Severity SA1408 { get; } = Severity.MinorWarning;
 
         // RemoveUnnecessaryCode
-        private static Severity SA1409 { get; } = Severity.None;
+        private static Severity SA1409 { get; } = Severity.MajorWarning;
 
         // RemoveDelegateParenthesisWhenPossible
-        private static Severity SA1410 { get; } = Severity.None;
+        private static Severity SA1410 { get; } = Severity.MinorWarning;
 
         // AttributeConstructorMustNotUseUnnecessaryParenthesis
-        private static Severity SA1411 { get; } = Severity.None;
+        private static Severity SA1411 { get; } = Severity.MinorWarning;
 
         // StoreFilesAsUtf8
-        private static Severity SA1412 { get; } = Severity.None;
+        private static Severity SA1412 { get; } = Severity.MajorWarning;
 
         // UseTrailingCommasInMultiLineInitializers
         private static Severity SA1413 { get; } = Severity.None;
@@ -375,67 +375,67 @@ namespace CSharpLint
         #region SA1400
 
         // BracesForMultiLineStatementsMustNotShareLine
-        private static Severity SA1500 { get; } = Severity.None;
+        private static Severity SA1500 { get; } = Severity.MinorWarning;
 
         // StatementMustNotBeOnSingleLine
-        private static Severity SA1501 { get; } = Severity.None;
+        private static Severity SA1501 { get; } = Severity.MajorWarning;
 
         // ElementMustNotBeOnSingleLine
-        private static Severity SA1502 { get; } = Severity.None;
+        private static Severity SA1502 { get; } = Severity.MinorWarning;
 
         // BracesMustNotBeOmitted
-        private static Severity SA1503 { get; } = Severity.None;
+        private static Severity SA1503 { get; } = Severity.MajorWarning;
 
         // AllAccessorsMustBeSingleLineOrMultiLine
-        private static Severity SA1504 { get; } = Severity.None;
+        private static Severity SA1504 { get; } = Severity.MajorWarning;
 
         // OpeningBracesMustNotBeFollowedByBlankLine
-        private static Severity SA1505 { get; } = Severity.None;
+        private static Severity SA1505 { get; } = Severity.MajorWarning;
 
         // ElementDocumentationHeadersMustNotBeFollowedByBlankLine
-        private static Severity SA1506 { get; } = Severity.None;
+        private static Severity SA1506 { get; } = Severity.MinorWarning;
 
         // CodeMustNotContainMultipleBlankLinesInARow
-        private static Severity SA1507 { get; } = Severity.None;
+        private static Severity SA1507 { get; } = Severity.MinorWarning;
 
         // ClosingBracesMustNotBePrecededByBlankLine
-        private static Severity SA1508 { get; } = Severity.None;
+        private static Severity SA1508 { get; } = Severity.MajorWarning;
 
         // OpeningBracesMustNotBePrecededByBlankLine
-        private static Severity SA1509 { get; } = Severity.None;
+        private static Severity SA1509 { get; } = Severity.MajorWarning;
 
         // ChainedStatementBlocksMustNotBePrecededByBlankLine
-        private static Severity SA1510 { get; } = Severity.None;
+        private static Severity SA1510 { get; } = Severity.MajorWarning;
 
         // WhileDoFooterMustNotBePrecededByBlankLine
-        private static Severity SA1511 { get; } = Severity.None;
+        private static Severity SA1511 { get; } = Severity.MajorWarning;
 
         // SingleLineCommentsMustNotBeFollowedByBlankLine
-        private static Severity SA1512 { get; } = Severity.None;
+        private static Severity SA1512 { get; } = Severity.MinorWarning;
 
         // ClosingBraceMustBeFollowedByBlankLine
-        private static Severity SA1513 { get; } = Severity.None;
+        private static Severity SA1513 { get; } = Severity.MajorWarning;
 
         // ElementDocumentationHeaderMustBePrecededByBlankLine
-        private static Severity SA1514 { get; } = Severity.None;
+        private static Severity SA1514 { get; } = Severity.MajorWarning;
 
         // SingleLineCommentMustBePrecededByBlankLine
-        private static Severity SA1515 { get; } = Severity.None;
+        private static Severity SA1515 { get; } = Severity.MajorWarning;
 
         // ElementsMustBeSeparatedByBlankLine
-        private static Severity SA1516 { get; } = Severity.None;
+        private static Severity SA1516 { get; } = Severity.MajorWarning;
 
         // CodeMustNotContainBlankLinesAtStartOfFile
-        private static Severity SA1517 { get; } = Severity.None;
+        private static Severity SA1517 { get; } = Severity.MajorWarning;
 
         // UseLineEndingsCorrectlyAtEndOfFile
-        private static Severity SA1518 { get; } = Severity.None;
+        private static Severity SA1518 { get; } = Severity.MinorWarning;
 
         // BracesMustNotBeOmittedFromMultiLineChildStatement
-        private static Severity SA1519 { get; } = Severity.None;
+        private static Severity SA1519 { get; } = Severity.MajorWarning;
 
         // UseBracesConsistently
-        private static Severity SA1520 { get; } = Severity.None;
+        private static Severity SA1520 { get; } = Severity.MajorWarning;
 
         #endregion
 
