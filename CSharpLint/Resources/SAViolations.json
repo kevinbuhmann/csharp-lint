@@ -1,0 +1,939 @@
+﻿[
+
+  {
+    "Id": "SA0001",
+    "Name": "XmlCommentAnalysisDisabled",
+    "Severity": "None"
+  },
+
+  {
+    "Id": "SA0002",
+    "Name": "InvalidSettingsFile",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1000",
+    "Name": "KeywordsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1001",
+    "Name": "CommasMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1002",
+    "Name": "SemicolonsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1003",
+    "Name": "SymbolsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1004",
+    "Name": "DocumentationLinesMustBeginWithSingleSpace",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1005",
+    "Name": "SingleLineCommentsMustBeginWithSingleSpace",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1006",
+    "Name": "PreprocessorKeywordsMustNotBePrecededBySpace",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1007",
+    "Name": "OperatorKeywordMustBeFollowedBySpace",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1008",
+    "Name": "OpeningParenthesisMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1009",
+    "Name": "ClosingParenthesisMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1010",
+    "Name": "OpeningSquareBracketsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1011",
+    "Name": "ClosingSquareBracketsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1012",
+    "Name": "OpeningBracesMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1013",
+    "Name": "ClosingBracesMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1014",
+    "Name": "OpeningGenericBracketsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1015",
+    "Name": "ClosingGenericBracketsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1016",
+    "Name": "OpeningAttributeBracketsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1017",
+    "Name": "ClosingAttributeBracketsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1018",
+    "Name": "NullableTypeSymbolsMustNotBePrecededBySpace",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1019",
+    "Name": "MemberAccessSymbolsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1020",
+    "Name": "IncrementDecrementSymbolsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1021",
+    "Name": "NegativeSignsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1022",
+    "Name": "PositiveSignsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1023",
+    "Name": "DereferenceAndAccessOfMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1024",
+    "Name": "ColonsMustBeSpacedCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1025",
+    "Name": "CodeMustNotContainMultipleWhitespaceInARow",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1026",
+    "Name": "CodeMustNotContainSpaceAfterNewKeywordInImplicitlyTypedArrayAllocation",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1027",
+    "Name": "UseTabsCorrectly",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1028",
+    "Name": "CodeMustNotContainTrailingWhitespace",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1100",
+    "Name": "DoNotPrefixCallsWithBaseUnlessLocalImplementationExists",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1101",
+    "Name": "PrefixLocalCallsWithThis",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1102",
+    "Name": "QueryClauseMustFollowPreviousClause",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1103",
+    "Name": "QueryClauseQueryClausesMustBeOnSeparateLinesOrAllOnOneLine",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1104",
+    "Name": "QueryClauseMustBeginOnNewLineWhenPreviousClauseSpansMultipleLines",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1105",
+    "Name": "QueryClausesSpanningMultipleLinesMustBeginOnOwnLine",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1106",
+    "Name": "CodeMustNotContainEmptyStatements",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1107",
+    "Name": "CodeMustNotContainMultipleStatementsOnOneLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1108",
+    "Name": "BlockStatementsMustNotContainEmbeddedComments",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1109",
+    "Name": "BlockStatementsMustNotContainEmbeddedRegions",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1110",
+    "Name": "OpeningParenthesisMustBeOnDeclarationLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1111",
+    "Name": "ClosingParenthesisMustBeOnLineOfLastParameter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1112",
+    "Name": "ClosingParenthesisMustBeOnLineOfOpeningParenthesis",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1113",
+    "Name": "CommaMustBeOnSameLineAsPreviousParameter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1114",
+    "Name": "ParameterListMustFollowDeclaration",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1115",
+    "Name": "ParameterMustFollowComma",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1116",
+    "Name": "SplitParametersMustStartOnLineAfterDeclaration",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1117",
+    "Name": "ParametersMustBeOnSameLineOrSeparateLines",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1118",
+    "Name": "ParameterMustNotSpanMultipleLines",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1119",
+    "Name": "StatementMustNotUseUnnecessaryParenthesis",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1120",
+    "Name": "CommentsMustContainText",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1121",
+    "Name": "UseBuiltInTypeAlias",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1122",
+    "Name": "UseStringEmptyForEmptyStrings",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1123",
+    "Name": "DoNotPlaceRegionsWithinElements",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1124",
+    "Name": "DoNotUseRegions",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1125",
+    "Name": "UseShorthandForNullableTypes",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1126",
+    "Name": "PrefixCallsCorrectly",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1127",
+    "Name": "GenericTypeConstraintsMustBeOnOwnLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1128",
+    "Name": "ConstructorInitializerMustBeOnOwnLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1129",
+    "Name": "DoNotUseDefaultValueTypeConstructor",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1130",
+    "Name": "UseLambdaSyntax",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1131",
+    "Name": "UseReadableConditions",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1132",
+    "Name": "DoNotCombineFields",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1133",
+    "Name": "DoNotCombineAttributes",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1134",
+    "Name": "AttributesMustNotShareLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1136",
+    "Name": "EnumValuesShouldBeOnSeparateLines",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1200",
+    "Name": "UsingDirectivesMustBePlacedCorrectly",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1201",
+    "Name": "ElementsMustAppearInTheCorrectOrder",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1202",
+    "Name": "ElementsMustBeOrderedByAccess",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1203",
+    "Name": "ConstantsMustAppearBeforeFields",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1204",
+    "Name": "StaticElementsMustAppearBeforeInstanceElements",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1205",
+    "Name": "PartialElementsMustDeclareAccess",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1206",
+    "Name": "DeclarationKeywordsMustFollowOrder",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1207",
+    "Name": "ProtectedMustComeBeforeInternal",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1208",
+    "Name": "SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1209",
+    "Name": "UsingAliasDirectivesMustBePlacedAfterOtherUsingDirectives",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1210",
+    "Name": "UsingDirectivesMustBeOrderedAlphabeticallyByNamespace",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1211",
+    "Name": "UsingAliasDirectivesMustBeOrderedAlphabeticallyByAliasName",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1212",
+    "Name": "PropertyAccessorsMustFollowOrder",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1213",
+    "Name": "EventAccessorsMustFollowOrder",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1214",
+    "Name": "ReadonlyElementsMustAppearBeforeNonReadonlyElements",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1215",
+    "Name": "InstanceReadonlyElementsMustAppearBeforeInstanceNonReadonlyElements",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1216",
+    "Name": "UsingStaticDirectivesMustBePlacedAtTheCorrectLocation",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1217",
+    "Name": "UsingStaticDirectivesMustBeOrderedAlphabetically",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1300",
+    "Name": "ElementMustBeginWithUpperCaseLetter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1301",
+    "Name": "ElementMustBeginWithLowerCaseLetter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1302",
+    "Name": "InterfaceNamesMustBeginWithI",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1303",
+    "Name": "ConstFieldNamesMustBeginWithUpperCaseLetter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1304",
+    "Name": "NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1305",
+    "Name": "FieldNamesMustNotUseHungarianNotation",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1306",
+    "Name": "FieldNamesMustBeginWithLowerCaseLetter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1307",
+    "Name": "AccessibleFieldsMustBeginWithUpperCaseLetter",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1308",
+    "Name": "VariableNamesMustNotBePrefixed",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1309",
+    "Name": "FieldNamesMustNotBeginWithUnder",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1310",
+    "Name": "FieldNamesMustNotContainUnder",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1311",
+    "Name": "StaticReadonlyFieldsMustBeginWithUpperCaseLetter",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1312",
+    "Name": "VariableNamesMustBeginWithLowerCaseLetter",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1313",
+    "Name": "ParameterNamesMustBeginWithLowerCaseLetter",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1400",
+    "Name": "AccessModifierMustBeDeclared",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1401",
+    "Name": "FieldsMustBePrivate",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1402",
+    "Name": "FileMayOnlyContainASingleClass",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1403",
+    "Name": "FileMayOnlyContainASingleNamespace",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1404",
+    "Name": "CodeAnalysisSuppressionMustHaveJustification",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1405",
+    "Name": "DebugAssertMustProvideMessageText",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1406",
+    "Name": "DebugFailMustProvideMessageText",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1407",
+    "Name": "ArithmeticExpressionsMustDeclarePrecedence",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1408",
+    "Name": "ConditionalExpressionsMustDeclarePrecedence",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1409",
+    "Name": "RemoveUnnecessaryCode",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1410",
+    "Name": "RemoveDelegateParenthesisWhenPossible",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1411",
+    "Name": "AttributeConstructorMustNotUseUnnecessaryParenthesis",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1412",
+    "Name": "StoreFilesAsUtf8",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1413",
+    "Name": "UseTrailingCommasInMultiLineInitializers",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1500",
+    "Name": "BracesForMultiLineStatementsMustNotShareLine",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1501",
+    "Name": "StatementMustNotBeOnSingleLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1502",
+    "Name": "ElementMustNotBeOnSingleLine",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1503",
+    "Name": "BracesMustNotBeOmitted",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1504",
+    "Name": "AllAccessorsMustBeSingleLineOrMultiLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1505",
+    "Name": "OpeningBracesMustNotBeFollowedByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1506",
+    "Name": "ElementDocumentationHeadersMustNotBeFollowedByBlankLine",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1507",
+    "Name": "CodeMustNotContainMultipleBlankLinesInARow",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1508",
+    "Name": "ClosingBracesMustNotBePrecededByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1509",
+    "Name": "OpeningBracesMustNotBePrecededByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1510",
+    "Name": "ChainedStatementBlocksMustNotBePrecededByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1511",
+    "Name": "WhileDoFooterMustNotBePrecededByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1512",
+    "Name": "SingleLineCommentsMustNotBeFollowedByBlankLine",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1513",
+    "Name": "ClosingBraceMustBeFollowedByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1514",
+    "Name": "ElementDocumentationHeaderMustBePrecededByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1515",
+    "Name": "SingleLineCommentMustBePrecededByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1516",
+    "Name": "ElementsMustBeSeparatedByBlankLine",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1517",
+    "Name": "CodeMustNotContainBlankLinesAtStartOfFile",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1518",
+    "Name": "UseLineEndingsCorrectlyAtEndOfFile",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1519",
+    "Name": "BracesMustNotBeOmittedFromMultiLineChildStatement",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1520",
+    "Name": "UseBracesConsistently",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1600",
+    "Name": "ElementsMustBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1601",
+    "Name": "PartialElementsMustBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1602",
+    "Name": "EnumerationItemsMustBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1603",
+    "Name": "DocumentationMustContainValidXml",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1604",
+    "Name": "ElementDocumentationMustHaveSummary",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1605",
+    "Name": "PartialElementDocumentationMustHaveSummary",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1606",
+    "Name": "ElementDocumentationMustHaveSummaryText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1607",
+    "Name": "PartialElementDocumentationMustHaveSummaryText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1608",
+    "Name": "ElementDocumentationMustNotHaveDefaultSummary",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1609",
+    "Name": "PropertyDocumentationMustHaveValue",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1610",
+    "Name": "PropertyDocumentationMustHaveValueText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1611",
+    "Name": "ElementParametersMustBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1612",
+    "Name": "ElementParameterDocumentationMustMatchElementParameters",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1613",
+    "Name": "ElementParameterDocumentationMustDeclareParameterName",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1614",
+    "Name": "ElementParameterDocumentationMustHaveText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1615",
+    "Name": "ElementReturnValueMustBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1616",
+    "Name": "ElementReturnValueDocumentationMustHaveText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1617",
+    "Name": "VoidReturnValueMustNotBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1618",
+    "Name": "GenericTypeParametersMustBeDocumented",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1619",
+    "Name": "GenericTypeParametersMustBeDocumentedPartialClass",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1620",
+    "Name": "GenericTypeParameterDocumentationMustMatchTypeParameters",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1621",
+    "Name": "GenericTypeParameterDocumentationMustDeclareParameterName",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1622",
+    "Name": "GenericTypeParameterDocumentationMustHaveText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1623",
+    "Name": "PropertySummaryDocumentationMustMatchAccessors",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1624",
+    "Name": "PropertySummaryDocumentationMustOmitSetAccessorWithRestrictedAccess",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1625",
+    "Name": "ElementDocumentationMustNotBeCopiedAndPasted",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1626",
+    "Name": "SingleLineCommentsMustNotUseDocumentationStyleSlashes",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1627",
+    "Name": "DocumentationTextMustNotBeEmpty",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1628",
+    "Name": "DocumentationTextMustBeginWithACapitalLetter",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1629",
+    "Name": "DocumentationTextMustEndWithAPeriod",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1630",
+    "Name": "DocumentationTextMustContainWhitespace",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1631",
+    "Name": "DocumentationMustMeetCharacterPercentage",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1632",
+    "Name": "DocumentationTextMustMeetMinimumCharacterLength",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1633",
+    "Name": "FileMustHaveHeader",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1634",
+    "Name": "FileHeaderMustShowCopyright",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1635",
+    "Name": "FileHeaderMustHaveCopyrightText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1636",
+    "Name": "FileHeaderCopyrightTextMustMatch",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1637",
+    "Name": "FileHeaderMustContainFileName",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1638",
+    "Name": "FileHeaderFileNameDocumentationMustMatchFileName",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1639",
+    "Name": "FileHeaderMustHaveSummary",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1640",
+    "Name": "FileHeaderMustHaveValidCompanyText",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1641",
+    "Name": "FileHeaderCompanyNameTextMustMatch",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1642",
+    "Name": "ConstructorSummaryDocumentationMustBeginWithStandardText",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1643",
+    "Name": "DestructorSummaryDocumentationMustBeginWithStandardText",
+    "Severity": "MinorWarning"
+  },
+  {
+    "Id": "SA1644",
+    "Name": "DocumentationHeadersMustNotContainBlankLines",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1645",
+    "Name": "IncludedDocumentationFileDoesNotExist",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1646",
+    "Name": "IncludedDocumentationXPathDoesNotExist",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1647",
+    "Name": "IncludeNodeDoesNotContainValidFileAndPath",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1648",
+    "Name": "InheritDocMustBeUsedWithInheritingClass",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1649",
+    "Name": "FileNameMustMatchTypeName",
+    "Severity": "MajorWarning"
+  },
+  {
+    "Id": "SA1650",
+    "Name": "ElementDocumentationMustBeSpelledCorrectly",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1651",
+    "Name": "DoNotUsePlaceholderElements",
+    "Severity": "None"
+  },
+  {
+    "Id": "SA1652",
+    "Name": "EnableXmlDocumentationOutput",
+    "Severity": "None"
+  },
+]

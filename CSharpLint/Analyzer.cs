@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
@@ -13,13 +14,15 @@ namespace CSharpLint
 {
     public static class Analyzer
     {
+        private static Violation[] saViolations = ReadSAViolations();
+
         public static ImmutableArray<Violation> Analyze(string filePath, string csharpSource)
         {
             ImmutableArray<Diagnostic> diagnostics = GetDiagnostics(filePath, csharpSource);
 
             return diagnostics
                 .Select(diagnostic => CreateViolation(diagnostic))
-                .Where(violation => violation.Serverity > Severity.None)
+                .Where(violation => violation.Severity > Severity.None)
                 .ToImmutableArray();
         }
 
@@ -33,10 +36,9 @@ namespace CSharpLint
                 .AddSyntaxTrees(tree);
 
             ImmutableArray<Diagnostic> parseDiagnostics = compilation.GetParseDiagnostics();
-
-            string stylycopAnalyzersPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "StyleCop.Analyzers.dll");
-            Assembly stylecopAnalyzersAssembly = Assembly.LoadFile(stylycopAnalyzersPath);
-            ImmutableArray<DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
+            
+            Assembly stylecopAnalyzersAssembly = Assembly.LoadFile(GetPathToFile(@"StyleCop.Analyzers.dll"));
+            ImmutableArray <DiagnosticAnalyzer> analyzers = stylecopAnalyzersAssembly.GetTypes()
                 .Where(t => t.IsAbstract == false && typeof(DiagnosticAnalyzer).IsAssignableFrom(t))
                 .Select(t => Activator.CreateInstance(t) as DiagnosticAnalyzer)
                 .ToImmutableArray();
@@ -72,10 +74,23 @@ namespace CSharpLint
             }
             else if (id.StartsWith("SA"))
             {
-                severity = SAViolations.GetSeverity(diagnostic);
+                severity = saViolations.First(v => v.Id == id).Severity;
             }
 
             return new Violation(startLine, endLine, id, message, severity);
+        }
+
+        private static Violation[] ReadSAViolations()
+        {
+            string saViolationsJson = File.ReadAllText(GetPathToFile(@"Resources\SAViolations.json"));
+            return JsonConvert.DeserializeObject<Violation[]>(saViolationsJson);
+        }
+
+        private static string GetPathToFile(string file)
+        {
+            string exeFilePath = Assembly.GetExecutingAssembly().Location;
+            string exeFolder = Path.GetDirectoryName(exeFilePath);
+            return Path.Combine(exeFolder, file);
         }
 
         private static void OnAnalyzerException(Exception exception, DiagnosticAnalyzer analyzer, Diagnostic diagnostic)

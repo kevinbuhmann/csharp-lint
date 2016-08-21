@@ -2,13 +2,13 @@
 {
     public class Violation
     {
-        public Violation(int startLine, int endLine, string id, string message, Severity serverity)
+        public Violation(int startLine, int endLine, string id, string message, Severity severity)
         {
             this.StartLine = startLine;
             this.EndLine = endLine;
             this.Id = id;
             this.Message = message;
-            this.Serverity = serverity;
+            this.Severity = severity;
         }
 
         public int StartLine { get; }
@@ -19,6 +19,6 @@
 
         public string Message { get; }
 
-        public Severity Serverity { get; }
+        public Severity Severity { get; }
     }
 }
