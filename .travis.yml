@@ -1,7 +1,7 @@
 language: csharp
-solution: CSharpStaticAnalyzer.sln
+solution: CSharpLint.sln
 mono:
  - beta
 script:
- - xbuild /p:Configuration=Release CSharpStaticAnalyzer.sln
- - mono CSharpStaticAnalyzer/bin/Release/CSharpStaticAnalyzer.exe TestSources/Test1.cs
+ - xbuild /p:Configuration=Release CSharpLint.sln
+ - mono CSharpLint/bin/Release/CSharpLint.exe TestSources/Test1.cs
