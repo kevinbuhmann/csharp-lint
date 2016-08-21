@@ -82,7 +82,7 @@ namespace CSharpLint
 
         private static Violation[] ReadSAViolations()
         {
-            string saViolationsJson = File.ReadAllText(GetPathToFile(@"Resources\SAViolations.json"));
+            string saViolationsJson = File.ReadAllText(GetPathToFile(@"Resources/SAViolations.json"));
             return JsonConvert.DeserializeObject<Violation[]>(saViolationsJson);
         }
 
