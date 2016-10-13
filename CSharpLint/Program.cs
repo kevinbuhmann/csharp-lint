@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Immutable;
 using System.IO;
+using Vstack.Extensions;
 
 namespace CSharpLint
 {
@@ -9,10 +10,7 @@ namespace CSharpLint
     {
         public static void Main(string[] args)
         {
-            if (args == null)
-            {
-                throw new ArgumentNullException(nameof(args));
-            }
+            args.ValidateNotNullParameter(nameof(args));
 
             if (args.Length != 1)
             {
