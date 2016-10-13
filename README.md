@@ -1,5 +1,6 @@
 # csharp-lint
 [![Build Status](https://travis-ci.org/kevinphelps/csharp-lint.svg?branch=master)](https://travis-ci.org/kevinphelps/csharp-lint)
+[![Build status](https://ci.appveyor.com/api/projects/status/eh3ttw06rapgn7k4/branch/master?svg=true)](https://ci.appveyor.com/project/kevinphelps/csharp-lint/branch/master)
 
 Tool that uses the .NET Compiler Platform (Roslyn) and the StyleCop analyzers to provide static analysis (linting) of a single C# source file independent of its containing project.
 
