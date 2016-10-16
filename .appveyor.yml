@@ -9,3 +9,4 @@ before_build:
 - nuget restore C:\projects\kevinphelps\csharp-lint\CSharpLint.sln
 build:
   verbosity: minimal
+configuration: Release
