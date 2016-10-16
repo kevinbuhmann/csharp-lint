@@ -1,10 +1,11 @@
 version: 1.0.{build}
 clone_folder: C:\projects\kevinphelps\csharp-lint
 clone_script:
-- git clone -q --depth=1 https://github.com/vintage-software/vstack.git C:\projects\vintage-software\vstack
-- git clone -q --depth=1 --branch=latest https://github.com/vintage-software/vstack-extensions.git C:\projects\vintage-software\vstack-extensions
-- git clone -q --depth=1 --branch=%APPVEYOR_REPO_BRANCH% https://github.com/kevinphelps/csharp-lint.git C:\projects\kevinphelps\csharp-lint
+- git clone -q --depth=50 https://github.com/vintage-software/vstack.git C:\projects\vintage-software\vstack
+- git clone -q --depth=50 --branch=latest https://github.com/vintage-software/vstack-extensions.git C:\projects\vintage-software\vstack-extensions
+- git clone -q --depth=50 --branch=%APPVEYOR_REPO_BRANCH% https://github.com/kevinphelps/csharp-lint.git C:\projects\kevinphelps\csharp-lint
 before_build:
+- git reset --hard %APPVEYOR_REPO_COMMIT%
 - nuget restore C:\projects\vintage-software\vstack-extensions\Vstack.Extensions.sln
 - nuget restore C:\projects\kevinphelps\csharp-lint\CSharpLint.sln
 build:
